@@ -20,6 +20,8 @@ html,body {
     justify-content: center;
     flex-direction: column;
     background-color: black;
+    position: relative;
+    overflow: hidden;
 }
 
 .c {
@@ -118,15 +120,40 @@ html,body {
 /* PAGE 1 KA RESPONSIVE */
 
 @media (max-width:600px) {
+
+    .circle {
+        margin-top: 100vh;
+    }
+
     .home {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        height: 150vh;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home .left {
+        margin-top: 2cm;
+    }
+
+    .home .left h1 {
+        font-size: 10vw;
+    }
+
+    .home .left p {
+        font-size: 2.1vw;
+        padding-top: .5cm;
     }
 
     .home .right img {
         height: 100%;
         width: 100%;
+        margin-top: 1cm;
     }
 }
 
