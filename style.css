@@ -15,6 +15,18 @@ html,body {
     width: 100%;
 }
 
+.cursor {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    background-color: lightcoral;
+    position: fixed;
+    z-index: 999999999999999;
+}
+
+
+
 .wrapper {
     display: flex;
     justify-content: center;
@@ -22,6 +34,10 @@ html,body {
     background-color: black;
     position: relative;
     overflow: hidden;
+}
+
+a {
+    text-decoration: none;
 }
 
 .c {
@@ -110,26 +126,147 @@ html,body {
     border-radius: 50%;
     overflow: hidden;
 }
+
+.icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1cm;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icon i {
+    font-size: 2.5vw;
+    color: black;
+    cursor: pointer;
+    background-color: white;
+    padding: 10px 12px;
+    border-radius: 50%;
+}
+
+
 .page-2 {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: black;
     z-index: 10;
+    padding: 20px 25px;
+    padding-bottom: 1cm;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-/* PAGE 1 KA RESPONSIVE */
+.page-2 h1 {
+    margin: 2vw 0;
+    padding: 1vw 1vw;
+    background-color: grey;
+    border-radius: 10px;
+    /* transform: translate(200%, -50%); */
+}
+
+.page-2 p {
+    text-align: center;
+}
+
+.page-2 .l-krish {
+    height: 40vh;
+    width: 100%;
+    border-radius: 10px;
+    background-color: lightslategray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+}
+/* 
+.page-2 .l-krish img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+} */
+
+.page-2 .r-shaurya {
+    height: 40vh;
+    width: 100%;
+    border-radius: 10px;
+    background-color: lightslategray;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+}
+
+.page-2 .l-ansh {
+    height: 40vh;
+    width: 100%;
+    border-radius: 10px;
+    background-color: lightslategray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+}
+
+.page-2 .r-praveen {
+    height: 40vh;
+    width: 100%;
+    border-radius: 10px;
+    background-color: lightslategray;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+}
+
+.page-2 .l-ashu {
+    height: 40vh;
+    width: 100%;
+    border-radius: 10px;
+    background-color: lightslategray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+    
+}
+
+.page-2 img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+
 
 @media (max-width:600px) {
 
+/* PAGE 1 KA ANIMATION */
+
+
+    .wrapper {
+        overflow: hidden;
+    }
+
+    .cursor {
+        display: hidden;
+        scale: 0;
+        opacity: 0;
+    }
+
     .circle {
-        margin-top: 100vh;
+        margin-top: 180vh;
+        height: 200vh;
+        width: 200vh;
     }
 
     .home {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        height: 150vh;
+        justify-content: center;
+        height: 120vh;
     }
 
     .content {
@@ -147,13 +284,38 @@ html,body {
 
     .home .left p {
         font-size: 2.1vw;
-        padding-top: .5cm;
+        padding-top: .2cm;
+    }
+
+    .home .left i {
+        margin-top: -.5cm;
     }
 
     .home .right img {
-        height: 100%;
-        width: 100%;
-        margin-top: 1cm;
+        height: 70%;
+        width: 70%;
+        margin-top: .5cm;
+        margin-left: 1.5cm;
     }
-}
 
+
+    /* PAGE 2 KA ANIMATION */
+
+
+    
+
+    .page-2 img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .page-2 p {
+        font-size: 2.5vw;
+        text-align: center;
+    }
+
+    .wrapper i {
+        font-size: 5vw;
+    }
+
+}
