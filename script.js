@@ -34,6 +34,20 @@ ScrollTrigger.refresh();
 init()
 
 
+// PAGE 1 KA ANIMATION
+
+function cursor(){
+    window.addEventListener("mousemove",function(dets){
+        gsap.to(".cursor",{
+            left:dets.x-10,
+            top:dets.y-10,
+        })
+    })
+}
+cursor()
+
+function page1(){
+    
 
 gsap.from(".home .left h1",{
     x:-100,
@@ -52,6 +66,14 @@ gsap.from(".home .left p",{
     duration:1,
 })
 
+gsap.from(".home .icon i",{
+    y:50,
+    opacity:0,
+    delay:1.5,
+    duration:1,
+    ease:"power3",
+})
+
 gsap.from(".right img",{
     x:100,
     opacity:0,
@@ -60,12 +82,14 @@ gsap.from(".right img",{
     duration:1,
 },"chacha")
 
+
 gsap.from(".home .c .circle",{
     y:200,
     opacity:0,
     duration:1,
     ease:"power3",
 })
+
 
 
 var tl = gsap.timeline({
@@ -100,6 +124,135 @@ var tl2 = gsap.timeline({
 tl2.to(".page-2",{
     backgroundColor:"white",
 })
+}
+page1()
+
+
+
+// PAGE 2 KA ANIMATION
+
+function page2(){
+
+    var h1 = gsap.timeline({
+    
+        scrollTrigger:{
+            trigger:".page-2 h1",
+            scroller:".wrapper",
+            // markers:true,
+            start:"top 100%",
+            end:"top 80%",
+            scrub:3,
+        }
+    })
+
+    h1.from(".page-2 h1",{
+        y:150,
+        opacity:0,
+        scrub:2,
+    })
+    
+var tl = gsap.timeline({
+    
+    scrollTrigger:{
+        trigger:".page-2 .l-krish",
+        scroller:".wrapper",
+        // markers:true,
+        start:"top 70%",
+        end:"top 50%",
+        scrub:3,
+    }
+})
+
+tl.from(".page-2 .l-krish",{
+    x:-1000,
+    opacity:0,
+    duration:1.5,
+    ease:"power3",
+
+})
+
+var t2 = gsap.timeline({
+    
+    scrollTrigger:{
+        trigger:".page-2 .r-shaurya",
+        scroller:".wrapper",
+        // markers:true,
+        start:"top 70%",
+        end:"top 50%",
+        scrub:3,
+    }
+})
+
+t2.from(".page-2 .r-shaurya",{
+    x:1000,
+    opacity:0,
+    duration:1.5,
+    ease:"power3",
+
+})
+
+var t3 = gsap.timeline({
+    
+    scrollTrigger:{
+        trigger:".page-2 .l-ansh",
+        scroller:".wrapper",
+        // markers:true,
+        start:"top 70%",
+        end:"top 50%",
+        scrub:3,
+    }
+})
+
+t3.from(".page-2 .l-ansh",{
+    x:-1000,
+    opacity:0,
+    duration:1,
+    ease:"power3",
+
+})
+
+var t2 = gsap.timeline({
+    
+    scrollTrigger:{
+        trigger:".page-2 .r-praveen",
+        scroller:".wrapper",
+        // markers:true,
+        start:"top 70%",
+        end:"top 50%",
+        scrub:3,
+    }
+})
+
+t2.from(".page-2 .r-praveen",{
+    x:1000,
+    opacity:0,
+    duration:1.5,
+    ease:"power3",
+
+})
+
+var t3 = gsap.timeline({
+    
+    scrollTrigger:{
+        trigger:".page-2 .l-ashu",
+        scroller:".wrapper",
+        // markers:true,
+        start:"top 70%",
+        end:"top 50%",
+        scrub:3,
+    }
+})
+
+t3.from(".page-2 .l-ashu",{
+    x:-1000,
+    opacity:0,
+    duration:1,
+    ease:"power3",
+
+})
+
+}
+page2()
 
 
 
